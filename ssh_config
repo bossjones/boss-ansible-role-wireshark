@@ -7,3 +7,4 @@ Host wireshark-master1*
   IdentityFile /Users/malcolm/dev/bossjones/bossjones-playbook-suite/boss-ansible-role-tools/.vagrant/machines/wireshark-master1/virtualbox/private_key
   IdentitiesOnly yes
   LogLevel FATAL
+  ForwardX11 yes

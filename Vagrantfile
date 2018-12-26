@@ -17,6 +17,7 @@ Vagrant.configure(2) do |config|
     # use the config key as the vm identifier
     config.vm.define name.to_s, autostart: true, primary: true do |vm_config|
       config.ssh.insert_key = false
+      config.ssh.forward_x11 = true
       vm_config.vm.usable_port_range = (2200..2250)
 
       # This will be applied to all vms
