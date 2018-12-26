@@ -1,0 +1,16 @@
+---
+- include_tasks: facts.yml
+
+- name: Add repositories
+  apt_repository:
+    repo: 'ppa:wireshark-dev/stable'
+    state: present
+    update_cache: yes
+  when: ansible_os_family == "Debian"
+
+- name: "Install wireshark"
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+      - wireshark
